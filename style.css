@@ -1,12 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
 
 @media only screen and (max-width: 990px) {
-    p, .content li {
+
+    p,
+    .content li {
         font-size: 15pt;
     }
 
+    li {
+        text-align: center;
+        margin-left: -35px;
+    }
+
     img {
-        width: 250px !important;
+        width: 330px !important;
+    }
+
+    .text {
+        padding: 10px !important;
+        width: 100% !important;
+    }
+
+    .content {
+        margin: 0px !important;
+    }
+
+    h1 {
+        text-align: center;
     }
 }
 
