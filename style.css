@@ -7,13 +7,13 @@
         font-size: 15pt;
     }
 
-    li {
+    .content li {
         text-align: center;
         margin-left: -35px;
     }
 
     img {
-        width: 330px !important;
+        width: 100% !important;
     }
 
     .text {
