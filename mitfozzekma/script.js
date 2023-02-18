@@ -7,9 +7,9 @@ function RandomFood() {
     let time = document.getElementById("time")
     let link = document.getElementById("link")
 
-    let rIndex = Math.floor(Math.random() * 9)
+    let rIndex = Math.floor(Math.random() * 10)
     while (rIndex == prevIndex) {
-        rIndex = Math.floor(Math.random() * 9)
+        rIndex = Math.floor(Math.random() * 10)
     }
 
     prevIndex = rIndex
