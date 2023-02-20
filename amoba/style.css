@@ -1,0 +1,50 @@
+@media only screen and (max-width: 900px) {
+  .playarea {
+    width: 70px !important;
+    height: 70px !important;
+    margin: 3px !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+    .playarea {
+      width: 50px !important;
+      height: 50px !important;
+    }
+  }
+
+.middle {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+body {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    144deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(147, 237, 255, 1) 100%
+  );
+}
+
+.playarea {
+  border: 2px solid lightblue;
+  transition-duration: 0.15s;
+  width: 120px;
+  height: 120px;
+  margin: 10px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.playarea:hover {
+  transform: scale(0.96);
+}
+
+.playarea:active {
+  transform: scale(0.93);
+  background-color: lightblue;
+}
