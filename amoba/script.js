@@ -140,13 +140,3 @@ function colorChange(id) {
 function restart() {
     location.reload()
 }
-
-// window.onload = () => {
-    
-//     let elements = document.getElementsByClassName("playarea")
-    
-//     for (let i = 0; i < elements.length; i++) {
-//         elements[i].addEventListener('click', function() {turn(elements[i].id)}, false)    
-//     }
-    
-// }
