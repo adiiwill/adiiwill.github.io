@@ -136,7 +136,3 @@ function colorChange(id) {
         document.getElementById(id).style.borderColor = "#4EE1EA"
     }
 }
-
-function restart() {
-    location.reload()
-}
