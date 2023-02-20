@@ -121,6 +121,8 @@ function turn(index) {
             checkWin()
             currentPlayer = "x"
         }
+
+        colorChange(index)
     }
 }
 
@@ -139,12 +141,12 @@ function restart() {
     location.reload()
 }
 
-window.onload = () => {
+// window.onload = () => {
     
-    let elements = document.getElementsByClassName("playarea")
+//     let elements = document.getElementsByClassName("playarea")
     
-    for (let i = 0; i < elements.length; i++) {
-        elements[i].addEventListener('click', function() {colorChange(elements[i].id)}, false)    
-    }
+//     for (let i = 0; i < elements.length; i++) {
+//         elements[i].addEventListener('click', function() {turn(elements[i].id)}, false)    
+//     }
     
-}
+// }
