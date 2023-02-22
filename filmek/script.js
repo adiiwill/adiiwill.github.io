@@ -533,4 +533,5 @@ window.onload = () => {
         tr.appendChild(td6)
         td6.innerHTML = el.Awards
     });
+    
 }
