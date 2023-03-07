@@ -191,10 +191,11 @@ button:active {
   transition-duration: .2s;
   border-radius: 3px;
   font-size: 16pt;
+  background-color: #76FF7A;
 }
 
 #akasztofa:hover {
   border-radius: 10px;
-  transform: scale(1.05);
-  font-size: 18pt;
+  background-color: #b8ffba;
+  font-size: 17pt;
 }
