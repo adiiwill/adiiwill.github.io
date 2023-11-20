@@ -28,7 +28,7 @@ window.addEventListener("load", () => {
 
   // Handles commands
   function Dispatch(command) {
-    const cmd = command.split(" ")[0];
+    const cmd = command.split(" ")[0].toLowerCase();
     const args =
       command.split(" ").length == 1
         ? ""
