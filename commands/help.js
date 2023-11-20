@@ -12,6 +12,5 @@ export const Help = () => {
     <span style="color: var(--cmdcolor)">[help]</span>  - Shows this list
     <span style="color: var(--cmdcolor)">[clear]</span> - Clears the console
     <span style="color: var(--cmdcolor)">[echo](args)</span> - Displays a message
-    <span style="color: var(--cmdcolor)">[history]</span> - History of commands
-    <span style="color: var(--cmdcolor)">[exit]</span> - Closes the terminal</pre>`);
+    <span style="color: var(--cmdcolor)">[history]</span> - History of commands</pre>`);
 };

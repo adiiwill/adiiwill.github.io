@@ -44,7 +44,6 @@ window.addEventListener("load", () => {
     else if (cmd == "echo") m.Echo(args);
     else if (cmd == "history" || cmd == "h") m.History(cmdHistory);
     else if (cmd == "skills") m.Skills();
-    else if (cmd == "exit") m.Exit();
     else if (cmd)
       m.Log(
         `<pre>'${cmd}' is not recognized as a command.<br>Type <span style="color: var(--cmdcolor)">[help]</span> for the list of commands.</pre>`
