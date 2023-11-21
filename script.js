@@ -8,11 +8,12 @@ window.addEventListener("load", () => {
 
   // Autofocues on the prompt whenever a button is pressed
   document.addEventListener("keydown", function (e) {
+    const inputfield = document.getElementById("inputfield");
+    inputfield.focus();
     if (e.key === "Enter") {
       // Checks enter press and dispatches commands
-      const command = document.getElementById("inputfield");
-      Dispatch(command.value);
-      command.value = "";
+      Dispatch(inputfield.value);
+      inputfield.value = "";
     } else if (e.key === "ArrowUp") {
       // Increments history index
       const inputfield = document.getElementById("inputfield");
@@ -79,7 +80,7 @@ window.addEventListener("load", () => {
   made by <span style="color: var(--cmdcolor)">adiiwill</span>.
     </pre>`);
 
-    document.getElementById("inputfield").placeholder = "Press here to type"
+    document.getElementById("inputfield").placeholder = "Press here to type";
   }
   Dispatch("help");
   cmdHistory = [];
