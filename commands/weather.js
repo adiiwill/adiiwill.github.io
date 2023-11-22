@@ -6,7 +6,7 @@ export const Weather = async (args) => {
     let data = await response.text();
     Log(
       `<pre>${
-        response.ok ? `${data}Powered by wttr.in` : "City not found..."
+        response.ok ? `${data}Powered by wttr.in` : `"${args[0]}" city couldn't be found.`
       }</pre>`
     );
   } else {
