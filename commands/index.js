@@ -6,5 +6,6 @@ import { Help } from "./help.js";
 import { History } from "./history.js";
 import { Log } from "./log.js";
 import { Skills } from "./skills.js";
+import { Weather } from "./weather.js";
 
-export { About, Clear, Contact, Echo, Help, History, Log, Skills };
+export { About, Clear, Contact, Echo, Help, History, Log, Skills, Weather };
