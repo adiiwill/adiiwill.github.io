@@ -1,7 +1,7 @@
 import * as m from "./commands/index.js";
 
 window.addEventListener("load", () => {
-  document.title = `stable:terminal_${Math.floor(Math.random() * 1000) + 1}`;
+  document.title = `adiiwill@github:terminal`;
 
   let cmdHistory = [];
   let hisIndex = 0;
