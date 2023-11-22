@@ -46,6 +46,7 @@ window.addEventListener("load", () => {
     else if (cmd == "history" || cmd == "h") m.History(cmdHistory);
     else if (cmd == "skills") m.Skills();
     else if (cmd == "weather" || cmd == "w") m.Weather(args);
+    else if (cmd == "quote" || cmd == "q") m.Quote();
     else if (cmd)
       m.Log(
         `<pre>'${cmd}' is not recognized as a command.<br>Type <span style="color: var(--cmdcolor)">[help]</span> for the list of commands.</pre>`
@@ -66,23 +67,11 @@ window.addEventListener("load", () => {
   
   Terminal-like portfolio made by <span style="color: var(--cmdcolor)">adiiwill</span>.
   </pre>`);
+    Dispatch("help");
   } else {
     m.Log(`<pre>
-    
-  :::    ::: ::::::::::: 
-  :+:    :+:     :+:     
-  +:+    +:+     +:+     
-  +#++:++#++     +#+     
-  +#+    +#+     +#+     
-  #+#    #+#     #+#     
-  ###    ### ########### 
-
-  Terminal-like portfolio
-  made by <span style="color: var(--cmdcolor)">adiiwill</span>.
+  <span style="color: red; background-color: white">Mobile version is not supported but still functional. Expect text being squished!</span>
     </pre>`);
-
-    document.getElementById("inputfield").placeholder = "Press here to type";
   }
-  Dispatch("help");
   cmdHistory = [];
 });

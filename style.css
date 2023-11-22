@@ -59,9 +59,11 @@ body {
 .result {
   opacity: 0;
   transition: opacity 0.4s ease;
-  width: 100%;
+  max-width: 100%;
   height: auto;
   margin-bottom: 30px;
+  border-left: 3px solid white;
+  padding-left: 10px;
 }
 
 .result.appear {
@@ -73,12 +75,14 @@ body {
   word-wrap: break-word;
 }
 
+.system_message {
+  border: none;
+  font-style: italic;
+  opacity: 0.4 !important;
+}
+
 @media only screen and (max-width: 1030px) {
   * {
     font-size: 12pt;
-  }
-
-  #inputfield {
-    border: 1px solid white;
   }
 }
