@@ -47,6 +47,7 @@ window.addEventListener("load", () => {
     else if (cmd == "skills") m.Skills();
     else if (cmd == "weather" || cmd == "w") m.Weather(args);
     else if (cmd == "quote" || cmd == "q") m.Quote();
+    else if (cmd == "sudo") m.Log("No", true);
     else if (cmd)
       m.Log(
         `<pre>'${cmd}' is not recognized as a command.<br>Type <span style="color: var(--cmdcolor)">[help]</span> for the list of commands.</pre>`
