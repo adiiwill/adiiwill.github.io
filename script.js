@@ -51,7 +51,6 @@ window.addEventListener("load", () => {
       m.Log(
         `<pre>'${cmd}' is not recognized as a command.<br>Type <span style="color: var(--cmdcolor)">[help]</span> for the list of commands.</pre>`
       );
-    document.getElementById("inputfield").scrollIntoView();
   }
 
   if (screen.width > 1030) {

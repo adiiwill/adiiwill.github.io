@@ -13,12 +13,10 @@ export const Weather = async (args = ["Budapest"]) => {
       }</pre>`
     );
   } else {
-    Log(`<pre>Invalid syntax
+    Log(`<pre>You have to put a city as args.
   
-  You have to write a city as args.
+Usage: weather (args)
   
-  Usage: weather (args)
-  
-  Powered by wttr.in</pre>`);
+Powered by wttr.in</pre>`);
   }
 };

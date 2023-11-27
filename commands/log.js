@@ -5,11 +5,12 @@ export const Log = (msg, isSys = false) => {
   div.innerHTML = msg;
   div.classList.add("result");
 
-  if (isSys) div.classList.add("system_message")
+  if (isSys) div.classList.add("system_message");
 
   content.appendChild(div);
 
   setTimeout(() => {
     div.classList.add("appear");
+    document.getElementById("inputfield").scrollIntoView();
   }, 50);
 };
