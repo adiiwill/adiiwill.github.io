@@ -19,7 +19,7 @@ Usage: contact (args)</pre>`);
       Open("https://github.com/adiiwill");
       Log("Executing <span style='color: var(--cmdcolor)'>[open:github.com]</span>");
     } else if (args[0] == "linkedin") {
-      Open("https://www.linkedin.com/in/%C3%A1d%C3%A1m-gazdag-747181296");
+      Open("https://www.linkedin.com/in/gazdag-%C3%A1d%C3%A1m-747181296/?trk=opento_sprofile_details");
       Log("Executing <span style='color: var(--cmdcolor)'>[open:linkedin.com]</span>");
     } else if (args[0] == "email") {
       Open("mailto:gazdagadam02@gmail.com");
