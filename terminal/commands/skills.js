@@ -19,13 +19,5 @@ export const Skills = () => {
   ╠══# <span style="color: var(--cmdcolor)">MySQL</span>
   ╠══# <span style="color: var(--cmdcolor)">MongoDB</span>
   ╚══# <span style="color: var(--cmdcolor)">Database integrations /w php, node_js</span>
-
-  ╔══════& <span style="color: var(--cmdhighlight)">Gained knowledge from:</span>
-  ╠══# <span style="color: var(--highlight)">[CS50's Introduction to Computer Science by Hardvard]</span>
-  ╠══# <span style="color: var(--highlight)">[CS50's Introduction to Programming with Python by Hardvard]</span>
-  ╠══# <span style="color: var(--highlight)">[Website: freeCodeCamp]</span>
-  ╠══# <span style="color: var(--highlight)">[Website: Exercism]</span>
-  ╚══# <span style="color: var(--highlight)">[Website: W3Schools]</span>
-
   </pre>`);
 };

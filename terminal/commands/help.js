@@ -12,7 +12,7 @@ export const Help = () => {
     <span style="color: var(--cmdcolor)">[help]</span>  - Shows this list
     <span style="color: var(--cmdcolor)">[clear]</span> - Clears the console
     <span style="color: var(--cmdcolor)">[echo](args)</span> - Displays a message
-    <span style="color: var(--cmdcolor)">[weather](args)</span> - Shows current weather
     <span style="color: var(--cmdcolor)">[quote]</span> - Tells you wise things
-    <span style="color: var(--cmdcolor)">[history]</span> - History of commands</pre>`);
+    <span style="color: var(--cmdcolor)">[history]</span> - History of commands
+    <span style="color: var(--cmdcolor)">[exit]</span> - Brings back to the main page</pre>`);
 };

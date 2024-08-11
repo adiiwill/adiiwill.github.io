@@ -45,7 +45,7 @@ window.addEventListener("load", () => {
     else if (cmd == "echo") m.Echo(args);
     else if (cmd == "history" || cmd == "h") m.History(cmdHistory);
     else if (cmd == "skills") m.Skills();
-    else if (cmd == "weather" || cmd == "w") m.Weather(args);
+    else if (cmd == "exit") m.Exit();
     else if (cmd == "quote" || cmd == "q") m.Quote();
     else if (cmd == "sudo") m.Log("No", true);
     else if (cmd)

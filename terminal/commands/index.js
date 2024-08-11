@@ -7,7 +7,7 @@ import { History } from "./history.js";
 import { Log } from "./log.js";
 import { Quote } from "./quote.js";
 import { Skills } from "./skills.js";
-import { Weather } from "./weather.js";
+import { Exit } from "./exit.js";
 
 export {
   About,
@@ -18,6 +18,6 @@ export {
   History,
   Log,
   Skills,
-  Weather,
+  Exit,
   Quote,
 };

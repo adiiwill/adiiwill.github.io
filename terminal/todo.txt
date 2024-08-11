@@ -1,0 +1,2 @@
+- Make an AI conversation option
+- Restructure the command system
