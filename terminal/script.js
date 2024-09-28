@@ -1,61 +1,83 @@
-import * as m from "./commands/index.js";
+import * as commands from "./commands/index.js";
 
-window.addEventListener("load", () => {
-  document.title = `adiiwill@github:terminal`;
-
-  let cmdHistory = [];
-  let hisIndex = 0;
-
-  // Autofocues on the prompt whenever a button is pressed
-  document.addEventListener("keydown", function (e) {
-    const inputfield = document.getElementById("inputfield");
-    inputfield.focus();
-    if (e.key === "Enter") {
-      // Checks enter press and dispatches commands
-      Dispatch(inputfield.value);
-      inputfield.value = "";
-    } else if (e.key === "ArrowUp") {
-      // Increments history index
-      const inputfield = document.getElementById("inputfield");
-      if (hisIndex < cmdHistory.length - 1) hisIndex += 1;
-      if (cmdHistory[hisIndex]) inputfield.value = cmdHistory[hisIndex];
-    } else if (e.key === "ArrowDown") {
-      // Decrements history index
-      const inputfield = document.getElementById("inputfield");
-      if (hisIndex > 0) hisIndex -= 1;
-      if (cmdHistory[hisIndex]) inputfield.value = cmdHistory[hisIndex];
+class TerminalPortfolio {
+    constructor() {
+        this.cmdHistory = [];
+        this.historyIndex = 0;
+        this.inputField = document.getElementById("inputfield");
     }
-  });
 
-  // Handles commands
-  function Dispatch(command) {
-    const cmd = command.split(" ")[0].toLowerCase();
-    const args =
-      command.split(" ").length == 1
-        ? ""
-        : command.substr(command.indexOf(" ") + 1).split(" ");
+    init() {
+        document.title = "adiiwill@github:terminal";
+        this.addEventListeners();
+        this.displayWelcomeMessage();
+    }
 
-    if (command) cmdHistory.push(command);
-    hisIndex = cmdHistory.length - 1;
+    addEventListeners() {
+        document.addEventListener("keydown", this.handleKeyPress.bind(this));
+    }
 
-    if (cmd == "help" || cmd == "?") m.Help();
-    else if (cmd == "clear" || cmd == "cls") m.Clear();
-    else if (cmd == "about") m.About();
-    else if (cmd == "contact") m.Contact(args);
-    else if (cmd == "echo") m.Echo(args);
-    else if (cmd == "history" || cmd == "h") m.History(cmdHistory);
-    else if (cmd == "skills") m.Skills();
-    else if (cmd == "exit") m.Exit();
-    else if (cmd == "quote" || cmd == "q") m.Quote();
-    else if (cmd == "sudo") m.Log("No", true);
-    else if (cmd)
-      m.Log(
-        `<pre>'${cmd}' is not recognized as a command.<br>Type <span style="color: var(--cmdcolor)">[help]</span> for the list of commands.</pre>`
-      );
-  }
+    handleKeyPress(e) {
+        this.inputField.focus();
+        switch (e.key) {
+            case "Enter":
+                this.dispatchCommand(this.inputField.value);
+                this.inputField.value = "";
+                break;
+            case "ArrowUp":
+                this.navigateHistory(1);
+                break;
+            case "ArrowDown":
+                this.navigateHistory(-1);
+                break;
+        }
+    }
 
-  if (screen.width > 1030) {
-    m.Log(`<pre>
+    navigateHistory(direction) {
+        const newIndex = this.historyIndex + direction;
+        if (newIndex >= 0 && newIndex < this.cmdHistory.length) {
+            this.historyIndex = newIndex;
+            this.inputField.value = this.cmdHistory[this.historyIndex];
+        }
+    }
+
+    dispatchCommand(command) {
+        const [cmd, ...args] = command.toLowerCase().split(" ");
+
+        if (command) {
+            this.cmdHistory.push(command);
+            this.historyIndex = this.cmdHistory.length - 1;
+        }
+
+        const commandMap = {
+            help: () => commands.Help(),
+            "?": () => commands.Help(),
+            clear: () => commands.Clear(),
+            cls: () => commands.Clear(),
+            about: () => commands.About(),
+            contact: () => commands.Contact(args),
+            echo: () => commands.Echo(args),
+            history: () => commands.History(this.cmdHistory),
+            h: () => commands.History(this.cmdHistory),
+            skills: () => commands.Skills(),
+            exit: () => commands.Exit(),
+            quote: () => commands.Quote().catch((e) => commands.Log(e.message, true)),
+            q: () => commands.Quote().catch((e) => commands.Log(e.message, true)),
+            sudo: () => commands.Log("No", true),
+        };
+
+        if (commandMap[cmd]) {
+            commandMap[cmd]();
+        } else if (cmd) {
+            commands.Log(
+                `<pre>'${cmd}' is not recognized as a command.<br>Type <span style="color: var(--cmdcolor)">[help]</span> for the list of commands.</pre>`
+            );
+        }
+    }
+
+    displayWelcomeMessage() {
+        if (screen.width > 1030) {
+            commands.Log(`<pre>
 
   :::       ::: :::::::::: :::        ::::::::   ::::::::  ::::    ::::  :::::::::: 
   :+:       :+: :+:        :+:       :+:    :+: :+:    :+: +:+:+: :+:+:+ :+:        
@@ -67,11 +89,27 @@ window.addEventListener("load", () => {
   
   Terminal-like portfolio made by <span style="color: var(--cmdcolor)">adiiwill</span>.
   </pre>`);
-    Dispatch("help");
-  } else {
-    m.Log(`<pre>
-  <span style="color: red; background-color: white">Mobile version is not supported but still functional. Expect text being squished!</span>
-    </pre>`);
-  }
-  cmdHistory = [];
+            this.dispatchCommand("help");
+        } else {
+            commands.Log(`<pre>
+
+  :::    ::: :::::::::::
+  :+:    :+:     :+:    
+  +:+    +:+     +:+    
+  +#++:++#++     +#+    
+  +#+    +#+     +#+    
+  #+#    #+#     #+#    
+  ###    ### ###########
+  
+  Terminal-like portfolio made by <span style="color: var(--cmdcolor)">adiiwill</span>.
+  </pre>`);
+            commands.Log(`<pre><span style="color: red; background-color: white">Mobile version is not supported but still functional. Expect text being squished!</span></pre>`);
+            this.dispatchCommand("help");
+        }
+    }
+}
+
+window.addEventListener("load", () => {
+    const terminal = new TerminalPortfolio();
+    terminal.init();
 });

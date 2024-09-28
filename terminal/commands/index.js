@@ -1,23 +1,10 @@
-import { About } from "./about.js";
-import { Clear } from "./clear.js";
-import { Contact } from "./contact.js";
-import { Echo } from "./echo.js";
-import { Help } from "./help.js";
-import { History } from "./history.js";
-import { Log } from "./log.js";
-import { Quote } from "./quote.js";
-import { Skills } from "./skills.js";
-import { Exit } from "./exit.js";
-
-export {
-  About,
-  Clear,
-  Contact,
-  Echo,
-  Help,
-  History,
-  Log,
-  Skills,
-  Exit,
-  Quote,
-};
+export { About } from "./about.js";
+export { Clear } from "./clear.js";
+export { Contact } from "./contact.js";
+export { Echo } from "./echo.js";
+export { Help } from "./help.js";
+export { History } from "./history.js";
+export { Log } from "./log.js";
+export { Quote } from "./quote.js";
+export { Skills } from "./skills.js";
+export { Exit } from "./exit.js";
