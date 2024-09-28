@@ -55,7 +55,7 @@ class TerminalPortfolio {
             clear: () => commands.Clear(),
             cls: () => commands.Clear(),
             about: () => commands.About(),
-            contact: () => commands.Contact(args),
+            contact: () => commands.Contact(args[0]),
             echo: () => commands.Echo(args),
             history: () => commands.History(this.cmdHistory),
             h: () => commands.History(this.cmdHistory),

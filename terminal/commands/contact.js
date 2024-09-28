@@ -6,22 +6,23 @@ const Open = (link) => {
   }, 300);
 };
 
-export const Contact = (args) => {
-  if (!args) {
+export const Contact = (arg) => {
+  if (!arg) {
     Log(`<pre>My socials:
   <span style="color: var(--cmdcolor)">github</span>
   <span style="color: var(--cmdcolor)">linkedin</span>
   <span style="color: var(--cmdcolor)">email</span>
 
-Usage: contact (args)</pre>`);
+Usage: contact (arg)
+Example: contact linkedin</pre>`);
   } else {
-    if (args[0] == "github") {
+    if (arg === "github") {
       Open("https://github.com/adiiwill");
       Log("Executing <span style='color: var(--cmdcolor)'>[open:github.com]</span>");
-    } else if (args[0] == "linkedin") {
+    } else if (arg === "linkedin") {
       Open("https://www.linkedin.com/in/gazdagadam/");
       Log("Executing <span style='color: var(--cmdcolor)'>[open:linkedin.com]</span>");
-    } else if (args[0] == "email") {
+    } else if (arg === "email") {
       Open("mailto:gazdagadam02@gmail.com");
       Log("Executing <span style='color: var(--cmdcolor)'>[mailto:gmail]</span>")
     }
