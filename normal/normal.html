@@ -3,9 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Normal portfolio</title>
-</head>
+    <title>Ádám's Portfolio</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
 <body>
-    
+<div class="container">
+    <header>
+        <h2>Hello!<br>I'm Ádám</h2>
+        <p>// a full stack developer</p>
+    </header>
+
+    <section id="about">
+        <h3>About Me</h3>
+        <p>I'm a dedicated web developer with expertise in modern frontend and backend technologies. Specializing in JavaScript, React, Node.js, and database management (SQL, MongoDB, Postgres), I'm passionate about creating responsive and efficient web applications. As a quick learner and fluent English speaker, I'm eager to contribute my skills to innovative web projects and continue growing in this dynamic field.</p>
+    </section>
+
+    <section id="skills">
+        <h3>Skills</h3>
+        <div class="skills-list">
+            <span class="skill-item">JavaScript</span>
+            <span class="skill-item">Node.js</span>
+            <span class="skill-item">Git</span>
+            <span class="skill-item">Express.js</span>
+            <span class="skill-item">Jest.js</span>
+            <span class="skill-item">React</span>
+            <span class="skill-item">React Native</span>
+            <span class="skill-item">SQL</span>
+            <span class="skill-item">Postgres</span>
+            <span class="skill-item">MongoDB</span>
+            <span class="skill-item">Python</span>
+            <span class="skill-item">PHP</span>
+            <span class="skill-item">HTML</span>
+            <span class="skill-item">CSS</span>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h3>Projects</h3>
+        <div class="projects-list">
+            <div class="project-item">
+                <h4>Fullstack Note App</h4>
+                <p>Vocational school final examination project</p>
+                <a href="https://github.com/adiiwill/fullstack_note_app" class="external-link">
+                    <i class='bx bx-link-external'></i>
+                </a>
+            </div>
+            <div class="project-item">
+                <h4>Terminal protfolio</h4>
+                <p>A terminal-like portfolio</p>
+                <a href="https://adiiwill.github.io/terminal/terminal.html" class="external-link">
+                    <i class='bx bx-link-external'></i>
+                </a>
+            </div>
+        </div>
+        <a class="ext" href="https://github.com/adiiwill">More on my github <sup class='bx bx-link-external'></sup></a>
+    </section>
+
+    <section class="work-experience">
+        <h3>Work experience</h3>
+        <pre class="code-block">
+> workExperience.length
+0
+> workExperience[0]
+Uncaught TypeError: Cannot read properties of undefined (reading '0')
+    at &lt;anonymous&gt;:1:16
+
+> // TODO: Gain experience and populate this array!
+> // Accepting pull requests for exciting opportunities :)
+        </pre>
+    </section>
+
+    <section id="education">
+        <h3>Education</h3>
+        <div class="educations">
+            <div class="education-item">
+                <h4>Software developer and tester</h4>
+                <i>2022 – 2024</i>
+                <p>Debreceni SZC Baross Gábor Technikum, Szakképző Iskola és Kollégium</p>
+            </div>
+            <div class="education-item">
+                <h4>Office IT specialist</h4>
+                <i>2018 – 2022</i>
+                <p>Nyíregyházi SZC Tiszavasvári Szakképző Iskola és Kollégium</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h3>Contact</h3>
+        <div class="contact-info">
+            <p><i class='bx bxl-linkedin-square' ></i> <a href="https://www.linkedin.com/in/gazdagadam" target="_blank">gazdagadam</a><sup class='bx bx-link-external'></sup></p>
+            <p><i class='bx bxl-github'></i> <a href="https://github.com/adiiwill" target="_blank">adiiwill</a><sup class='bx bx-link-external'></sup></p>
+        </div>
+    </section>
+</div>
 </body>
 </html>

@@ -1,21 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
-    <script src="index.js"></script>
-    <title>Main</title>
-  </head>
-  <body>
-    <div class="small"></div>
-    <div class="big"></div>
-    <video autoplay loop muted>
-      <source src="3129671-uhd_3840_2160_30fps.mp4" type="video/mp4" />
-    </video>
-    <div class="center">
-      <a href="normal/normal.html">Normal<br>[In progress]</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <script src="index.js"></script>
+  <title>Portfolio Selection</title>
+</head>
+<body>
+<div id="loading-screen">
+  <div class="loader"></div>
+  <p>Loading...</p>
+</div>
+<div id="content">
+  <div class="small"></div>
+  <div class="big"></div>
+  <video id="background-video" autoplay loop muted playsinline>
+    <source src="3129671-uhd_3840_2160_30fps.mp4" type="video/mp4" />
+  </video>
+  <div class="center">
+    <h1 class="portfolio-header">Select Portfolio Style</h1>
+    <a href="normal/normal.html">Normal</a>
+    <div class="terminal-container">
       <a href="terminal/terminal.html">Terminal_</a>
+      <p class="pc-only">PC only</p>
     </div>
-  </body>
+  </div>
+</div>
+</body>
 </html>

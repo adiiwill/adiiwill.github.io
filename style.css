@@ -2,7 +2,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  overflow: hidden;
   cursor: none;
 }
 
@@ -11,6 +10,11 @@ body {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  font-family: "Eurostile", sans-serif;
+  background-color: #000;
 }
 
 @font-face {
@@ -18,31 +22,97 @@ body {
   src: url("Eurostile.ttf");
 }
 
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease-out;
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(0, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #0ff;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+#loading-screen p {
+  margin-top: 20px;
+  color: #0ff;
+  font-size: 18px;
+  letter-spacing: 0.1em;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+}
+
+#content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
 video {
   position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   z-index: -1;
+  filter: brightness(50%);
 }
 
 .center {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 3em;
-  width: 100vw;
-  height: 100vh;
+  gap: 2em;
   background-image: url("overlay.png");
   background-repeat: repeat;
+  padding: 20px;
+}
+
+.portfolio-header {
+  font-size: clamp(24px, 5vw, 36px);
+  color: #fff;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-shadow:
+          0 0 10px rgba(0, 255, 255, 0.7),
+          0 0 20px rgba(0, 255, 255, 0.5),
+          0 0 30px rgba(0, 255, 255, 0.3);
+  padding: 15px 30px;
+  position: relative;
 }
 
 a {
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 30px;
-  width: 12em;
+  padding: 20px;
+  width: 100%;
+  max-width: 300px;
   text-align: center;
-  font-size: 20pt;
-  font-family: Eurostile;
+  font-size: clamp(16px, 4vw, 20pt);
   text-decoration: none;
   letter-spacing: 0.25em;
   color: #fff;
@@ -55,28 +125,67 @@ a:hover {
   background-color: rgba(25, 25, 25, 0.5);
 }
 
+.terminal-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.pc-only {
+  color: rgba(0, 255, 255, 0.7);
+  font-size: clamp(12px, 2vw, 14px);
+  letter-spacing: 0.1em;
+  text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+}
+
 .small {
   pointer-events: none;
-  position: absolute;
+  position: fixed;
   width: 10px;
   height: 10px;
   background-color: #0ff;
   border-radius: 50%;
   box-shadow: 0 0 15px #0ff, 0 0 30px #0ff;
+  z-index: 3;
 }
 
 .big {
   pointer-events: none;
-  position: absolute;
+  position: fixed;
   width: 20px;
   height: 20px;
   border: 2px solid #0ff;
   border-radius: 50%;
   box-shadow: 0 0 15px #0ff, 0 0 30px #0ff;
   transition: all 0.05s ease;
+  z-index: 3;
 }
 
 a:hover ~ .big {
   width: 30px;
   height: 30px;
+}
+
+@media (max-width: 768px) {
+  .center {
+    gap: 1.5em;
+  }
+
+  .portfolio-header {
+    font-size: clamp(20px, 4vw, 28px);
+    padding: 10px 20px;
+  }
+
+  a {
+    padding: 15px;
+  }
+
+  .small, .big {
+    display: none;
+  }
+
+  * {
+    cursor: auto;
+  }
 }
