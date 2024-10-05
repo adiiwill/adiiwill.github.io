@@ -189,3 +189,12 @@ a:hover ~ .big {
     cursor: auto;
   }
 }
+
+footer {
+  position: absolute;
+  bottom: 20px;
+  opacity: 30%;
+  color: white;
+  text-align: center;
+  width: 100%;
+}

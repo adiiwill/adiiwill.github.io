@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,400;1,500;1,600;1,700&display=swap");
 
 :root {
-  --font: "IBM Plex Mono", monospace;
+  --font: "IBM Plex Mono";
   --font-color: #a4a4a4;
   --background-color: #0c0c0c;
   --cmdcolor: #3498db;
@@ -21,8 +21,9 @@
 
 body {
   padding: 5px;
-  font-family: var(--font);
+  font-family: var(--font), monospace;
   background-color: var(--background-color);
+  overflow: hidden;
 }
 
 #terminal::-webkit-scrollbar {
@@ -51,10 +52,11 @@ body {
   outline: none;
 }
 #inputfield {
-  font-family: var(--font);
+  font-family: var(--font), monospace;
   border: none;
   width: 100%;
-  background-color: var(--background-color);
+  background-color: transparent;
+  z-index: 1;
 }
 
 .result {
@@ -86,4 +88,13 @@ body {
   * {
     font-size: 12pt;
   }
+}
+
+footer {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  text-align: right;
+  width: 100%;
+  opacity: 30%;
 }
