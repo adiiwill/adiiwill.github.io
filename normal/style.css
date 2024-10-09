@@ -82,7 +82,6 @@ h3 {
 
 .project-item {
     background: #1a1a1a;
-    border-left: 2px solid rgb(0, 195, 44);
     padding: 1rem 1rem;
     border-radius: 5px;
     position: relative;
@@ -260,5 +259,9 @@ footer {
 
     .certificates-container {
         grid-template-columns: 1fr;
+    }
+
+    .certificate-body {
+        width: 100%;
     }
 }
