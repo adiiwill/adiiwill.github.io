@@ -176,6 +176,7 @@ sup {
     width: 18rem;
     height: 12rem;
     border: 2px solid #003dac;
+    border-top: 0;
     padding-bottom: .3rem;
     transition: .3s ease all;
 }
@@ -185,6 +186,8 @@ sup {
     justify-content: center;
     align-items: center;
     background: #003dac;
+    border-top-left-radius: .2rem;
+    border-top-right-radius: .2rem;
     width: 100%;
     gap: .3rem;
 }
