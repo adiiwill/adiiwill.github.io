@@ -41,10 +41,15 @@ section {
 }
 
 #about {
-    background: #1a1a1a;
+    background: linear-gradient(90deg, rgb(27, 31, 59) 0%, #000 100%);
     border-radius: 5px;
     padding: 1.5rem;
     margin-top: 2rem;
+}
+
+#about p {
+    font-size: 1.2rem;
+    max-width: 600px;
 }
 
 h3 {
@@ -79,7 +84,7 @@ h3 {
     background: #1a1a1a;
     padding: 1rem 1rem;
     border-radius: 5px;
-    position: relative; /* Allow absolute positioning inside */
+    position: relative;
     text-decoration: none;
 }
 
@@ -92,7 +97,6 @@ h3 {
     text-decoration: none;
 }
 
-/* Optional: Add a hover effect for the icon */
 .external-link:hover {
     color: rgb(0,106,245);
     cursor: pointer;
@@ -160,4 +164,10 @@ footer {
     text-align: center;
     padding-top: 1rem;
     opacity: 30%;
+}
+
+@media (max-width: 600px) {
+    #about p {
+        font-size: 1rem;
+    }
 }
