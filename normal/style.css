@@ -95,12 +95,9 @@ h3 {
     color: #fff;
     font-size: 1.2rem;
     text-decoration: none;
-    transition: 0.2s;
 }
 
 .external-link:hover {
-    color: rgb(0, 195, 44);
-    filter: brightness(1.5);
     cursor: pointer;
 }
 
