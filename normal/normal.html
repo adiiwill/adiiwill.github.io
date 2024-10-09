@@ -122,8 +122,12 @@
     </section>
 
     <footer>
-        &copy 2024 Gazdag Ádám
+        &copy <span id="copyright-date"></span> Gazdag Ádám
     </footer>
 </div>
+
+<script>
+    document.getElementById('copyright-date').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
