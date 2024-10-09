@@ -41,7 +41,7 @@ section {
 }
 
 #about {
-    background: linear-gradient(90deg, rgb(27, 31, 59) 0%, #000 100%);
+    background: linear-gradient(90deg, rgb(12, 22, 78) 0%, #000 100%);
     border-radius: 5px;
     padding: 1.5rem;
     margin-top: 2rem;
@@ -171,10 +171,10 @@ sup {
 .certificate-body {
     display: flex;
     flex-direction: column;
-    background: #1a1a1a;
+    background: linear-gradient(145deg, rgba(0, 61, 172, 0.3), rgba(0, 61, 172, 0.1));
     border-radius: 5px;
     width: 18rem;
-    height: 12rem;
+    min-height: 12rem;
     border: 2px solid #003dac;
     border-top: 0;
     padding-bottom: .3rem;
@@ -196,13 +196,12 @@ sup {
     display: flex;
     height: 100%;
     flex: 1;
-    padding-top: 1rem;
-    padding-left: 1rem;
+    padding: 1rem;
     font-weight: bold;
 }
 
 .certificate-name p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
 .certificate-data {
@@ -216,6 +215,10 @@ sup {
     opacity: .3;
 }
 
+.certificate-issuer {
+    margin-top: auto;
+}
+
 .certificate-check {
     display: flex;
     justify-content: center;
@@ -224,6 +227,7 @@ sup {
     text-decoration: none;
     gap: .1rem;
     font-weight: bold;
+    margin-top: 1rem;
 }
 
 .educations {
@@ -250,7 +254,7 @@ footer {
 
 @media (max-width: 600px) {
     #about {
-        background: linear-gradient(151deg, rgb(27, 31, 59) 0%, #000 100%);
+        background: linear-gradient(151deg, rgb(12, 22, 78) 0%, #000 100%);
     }
 
     #about p {
