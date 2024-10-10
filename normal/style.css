@@ -161,7 +161,7 @@ sup {
     font-style: italic;
 }
 
-.certificates-container {
+#certificates-container {
     display: grid;
     justify-items: center;
     grid-template-columns: repeat(3, 1fr);
@@ -261,7 +261,7 @@ footer {
         font-size: 1rem;
     }
 
-    .certificates-container {
+    #certificates-container {
         grid-template-columns: 1fr;
     }
 
