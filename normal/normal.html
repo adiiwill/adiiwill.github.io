@@ -21,23 +21,50 @@
 
     <section id="skills">
         <h3>Skills</h3>
+        <!-- Filter Options -->
+        <div id="skill-filter">
+            <button onclick="filterSkills('all')">All</button>
+            <button onclick="filterSkills('frontend')">Frontend</button>
+            <button onclick="filterSkills('backend')">Backend</button>
+            <button onclick="filterSkills('tools')">Tools & Collaboration</button>
+            <button onclick="filterSkills('concepts')">Concepts & Practices</button>
+        </div>
+        <!-- Skills List -->
         <div class="skills-list">
-            <span class="skill-item">JavaScript</span>
-            <span class="skill-item">Node.js</span>
-            <span class="skill-item">Git</span>
-            <span class="skill-item">Express.js</span>
-            <span class="skill-item">Jest.js</span>
-            <span class="skill-item">React</span>
-            <span class="skill-item">React Native</span>
-            <span class="skill-item">SQL</span>
-            <span class="skill-item">Postgres</span>
-            <span class="skill-item">MongoDB</span>
-            <span class="skill-item">Python</span>
-            <span class="skill-item">PHP</span>
-            <span class="skill-item">HTML</span>
-            <span class="skill-item">CSS</span>
+            <!-- Frontend -->
+            <span class="skill-item frontend">HTML</span>
+            <span class="skill-item frontend">CSS</span>
+            <span class="skill-item frontend">JavaScript</span>
+            <span class="skill-item frontend">React</span>
+            <span class="skill-item frontend">React Native</span>
+            <span class="skill-item frontend">Expo</span>
+            <span class="skill-item frontend">Jest.js</span>
+
+            <!-- Backend -->
+            <span class="skill-item backend">Node.js</span>
+            <span class="skill-item backend">Express.js</span>
+            <span class="skill-item backend">PHP</span>
+            <span class="skill-item backend">Python</span>
+            <span class="skill-item backend">C#</span>
+            <span class="skill-item backend">Java</span>
+            <span class="skill-item backend">SQL</span>
+            <span class="skill-item backend">Postgres</span>
+            <span class="skill-item backend">MongoDB</span>
+            <span class="skill-item backend">GraphQL</span>
+
+            <!-- Tools & Collaboration -->
+            <span class="skill-item tools">Git</span>
+            <span class="skill-item tools">GitHub</span>
+            <span class="skill-item tools">Jira</span>
+            <span class="skill-item tools">Trello</span>
+
+            <!-- Concepts & Practices -->
+            <span class="skill-item concepts">REST APIs</span>
+            <span class="skill-item concepts">CRUD</span>
+            <span class="skill-item concepts">OOP</span>
         </div>
     </section>
+
 
     <section id="projects">
         <h3>Projects</h3>
@@ -111,6 +138,20 @@
 
 <script>
     document.getElementById('copyright-date').textContent = new Date().getFullYear();
+</script>
+<script>
+    function filterSkills(category) {
+        var skills = document.querySelectorAll('.skill-item');
+        skills.forEach(function(skill) {
+            if (category === 'all') {
+                skill.style.display = 'inline-block';
+            } else if (skill.classList.contains(category)) {
+                skill.style.display = 'inline-block';
+            } else {
+                skill.style.display = 'none';
+            }
+        });
+    }
 </script>
 <script src="displayCertificates.js"></script>
 </body>
