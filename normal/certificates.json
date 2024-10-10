@@ -1,11 +1,5 @@
 [
   {
-    "name": "Foundational C# with Microsoft",
-    "issuer": "freeCodeCamp",
-    "date": "Nov 2023",
-    "url": "https://www.freecodecamp.org/certification/adiiwill/foundational-c-sharp-with-microsoft"
-  },
-  {
     "name": "Career Essentials in GitHub Professional Certificate",
     "issuer": "GitHub",
     "date": "Oct 2024",
@@ -16,5 +10,11 @@
     "issuer": "Udemy",
     "date": "Jul 2024",
     "url": "https://www.udemy.com/certificate/UC-0823c16f-6961-4d71-953c-5597ecfddbcb/"
+  },
+  {
+    "name": "Foundational C# with Microsoft",
+    "issuer": "freeCodeCamp",
+    "date": "Nov 2023",
+    "url": "https://www.freecodecamp.org/certification/adiiwill/foundational-c-sharp-with-microsoft"
   }
 ]
