@@ -19,7 +19,9 @@ body {
 
 @font-face {
   font-family: "Eurostile";
-  src: url("Eurostile.ttf");
+  src: url("Eurostile.woff2") format("woff2"),
+       url("Eurostile.woff") format("woff");
+  font-display: swap;
 }
 
 #loading-screen {
