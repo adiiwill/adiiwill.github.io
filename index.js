@@ -54,14 +54,14 @@ const fadeOutLoadingScreen = () => {
 };
 
 // Check if the video has loaded
-video.addEventListener('load', fadeOutLoadingScreen);
+video.addEventListener('canplay', fadeOutLoadingScreen);
 
 // Fallback in case video takes too long to load
 setTimeout(() => {
   if (loadingScreen.style.opacity !== '0') {
     fadeOutLoadingScreen();
   }
-}, 5000); // Wait for 5 seconds max
+}, 3000); // Wait for 3 seconds max
 
 window.addEventListener('contextmenu', (e) => {
   e.preventDefault();
