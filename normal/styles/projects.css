@@ -1,19 +1,82 @@
-#projects .ext {
-    text-decoration: underline;
-    color: #fff;
+#projects {
+    position: relative;
+    padding: 2rem 0;
 }
 
 .projects-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
-    margin-bottom: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .project-item {
-    background: #1a1a1a;
-    padding: 1rem 1rem;
-    border-radius: 5px;
+    background: linear-gradient(
+            145deg,
+            rgba(0, 106, 245, 0.1),
+            rgba(0, 0, 0, 0.2)
+    );
+    padding: 1.5rem;
+    border-radius: 12px;
     position: relative;
     text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 106, 245, 0.1);
+}
+
+.project-item h4 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+    background: linear-gradient(90deg, #fff, rgba(255, 255, 255, 0.9));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.project-item p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+    margin-right: 1.5rem;
+}
+
+.project-item .external-link {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    color: rgba(0, 106, 245, 0.8);
+    font-size: 1.2rem;
+    transition: all 0.2s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-3px);
+    border-color: rgba(0, 106, 245, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 106, 245, 0.1);
+}
+
+.project-item:hover .external-link {
+    color: rgba(0, 106, 245, 1);
+}
+
+#projects .ext {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+    transition: color 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+#projects .ext:hover {
+    color: rgba(0, 106, 245, 1);
+}
+
+#projects .ext sup {
+    transition: transform 0.2s ease;
+}
+
+#projects .ext:hover sup {
+    transform: translate(2px, -2px);
 }

@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ádám's Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <link rel="stylesheet" href="style.css">
 
     <link rel="stylesheet" href="./styles/about.css">
     <link rel="stylesheet" href="./styles/certificates.css">
-    <link rel="stylesheet" href="./styles/contact.css">
+    <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="./styles/education.css">
     <link rel="stylesheet" href="./styles/projects.css">
     <link rel="stylesheet" href="./styles/skills.css">
@@ -21,9 +23,15 @@
     <header>
         <h2>Hello!<br>I'm Ádám</h2>
         <p>// a full stack developer</p>
+
+        <div class="contact-info">
+            <p><i class='bx bxl-linkedin-square' ></i> <a href="https://www.linkedin.com/in/gazdagadam" target="_blank">gazdagadam</a><sup class='bx bx-link-external'></sup></p>
+            <p><i class='bx bxl-github'></i> <a href="https://github.com/adiiwill" target="_blank">adiiwill</a><sup class='bx bx-link-external'></sup></p>
+        </div>
     </header>
 
     <section id="about">
+        <div class="shine-effect"></div>
         <h3>About Me</h3>
         <p style="margin-bottom: 1.5rem;">I'm a dedicated web developer with expertise in modern frontend and backend technologies. Specializing in JavaScript, React, Node.js, and database management (SQL, MongoDB, Postgres).</p>
         <p>I'm passionate about creating responsive and efficient web applications. As a quick learner and fluent English speaker, I'm eager to contribute my skills to innovative web projects and continue growing in this dynamic field.</p>
@@ -32,12 +40,15 @@
     <section id="skills">
         <h3>Skills</h3>
         <!-- Filter Options -->
-        <div id="skill-filter">
-            <button onclick="filterSkills('all')">All</button>
-            <button onclick="filterSkills('frontend')">Frontend</button>
-            <button onclick="filterSkills('backend')">Backend</button>
-            <button onclick="filterSkills('tools')">Tools & Collaboration</button>
-            <button onclick="filterSkills('concepts')">Concepts & Practices</button>
+        <div class="skill-filter">
+            <i class='bx bx-filter skill-filter-icon'></i>
+            <div id="skill-filters">
+                <button onclick="filterSkills('all')">All</button>
+                <button onclick="filterSkills('frontend')">Frontend</button>
+                <button onclick="filterSkills('backend')">Backend</button>
+                <button onclick="filterSkills('tools')">Tools & Collaboration</button>
+                <button onclick="filterSkills('concepts')">Concepts & Practices</button>
+            </div>
         </div>
         <!-- Skills List -->
         <div class="skills-list">
@@ -73,7 +84,6 @@
             <span class="skill-item concepts">OOP</span>
         </div>
     </section>
-
 
     <section id="projects">
         <h3>Projects</h3>
@@ -144,8 +154,15 @@
 
     <section id="certificates">
         <h3>Certifications</h3>
-        <div id="certificates-container">
+        <div class="swiper certificates-swiper">
+            <div class="swiper-wrapper" id="certificates-container">
 
+            </div>
+            <!-- Navigation -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
         </div>
     </section>
 
@@ -162,14 +179,6 @@
                 <i>2018 – 2022</i>
                 <p>Nyíregyházi SZC Tiszavasvári Szakképző Iskola és Kollégium</p>
             </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h3>Contact</h3>
-        <div class="contact-info">
-            <p><i class='bx bxl-linkedin-square' ></i> <a href="https://www.linkedin.com/in/gazdagadam" target="_blank">gazdagadam</a><sup class='bx bx-link-external'></sup></p>
-            <p><i class='bx bxl-github'></i> <a href="https://github.com/adiiwill" target="_blank">adiiwill</a><sup class='bx bx-link-external'></sup></p>
         </div>
     </section>
 
