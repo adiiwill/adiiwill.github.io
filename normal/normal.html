@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./styles/about.css">
     <link rel="stylesheet" href="./styles/certificates.css">
     <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="./styles/navbar.css">
     <link rel="stylesheet" href="./styles/education.css">
     <link rel="stylesheet" href="./styles/projects.css">
     <link rel="stylesheet" href="./styles/skills.css">
@@ -20,6 +21,22 @@
 </head>
 <body>
 <div class="container">
+    <div class="menu-toggle">
+        <i class='bx bx-menu'></i>
+    </div>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#work-experience">Experience</a>
+                <a href="#certificates">Certificates</a>
+                <a href="#education">Education</a>
+            </div>
+        </div>
+    </nav>
+
     <header>
         <h2>Hello!<br>I'm Ádám</h2>
         <p>// a full stack developer</p>
@@ -204,6 +221,11 @@
         });
     }
 </script>
+
+<button class="back-to-top">
+    <i class='bx bx-up-arrow-alt'></i>
+</button>
+
 <script src="displayCertificates.js"></script>
 </body>
 </html>
