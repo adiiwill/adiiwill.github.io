@@ -50,6 +50,24 @@
     cursor: pointer;
     transition: all 0.3s ease;
     flex-grow: 1;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-family: inherit;
+}
+
+#skill-filters button,
+#skill-filters button:hover,
+#skill-filters button:active,
+#skill-filters button:focus {
+    -webkit-tap-highlight-color: transparent;
+}
+
+#skill-filters button,
+#skill-filters button:hover,
+#skill-filters button:active,
+#skill-filters button:focus {
+    color: rgba(255, 255, 255, 0.9) !important;
 }
 
 #skill-filters button:hover,
