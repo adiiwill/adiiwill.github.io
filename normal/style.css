@@ -174,36 +174,284 @@ sup {
 }
 
 .work-experience {
-    background: #1a1a1a;
-    border-radius: 5px;
-    padding: 1.5rem;
+    background-image: url("./images/work-experience-background.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 2rem;
+    color: #e1e1e1;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
-.code-block {
-    background-color: #282c34;
-    border: 1px solid #444;
-    border-radius: 4px;
-    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
-    font-size: 14px;
-    line-height: 1.5;
-    overflow-x: auto;
-    padding: 15px;
-    margin: 10px 0;
-    color: #abb2bf;
+.work-experience h3 {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    background: linear-gradient(90deg, #fff, #a1a1a1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
-.code-block .prompt {
-    color: #98c379;
+
+.current-workplace {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 24px -1px rgba(0, 0, 0, 0.2);
 }
-.code-block .number {
-    color: #d19a66;
+
+.current-workplace:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 8px 32px -1px rgba(0, 0, 0, 0.3);
 }
-.code-block .error {
-    color: #e06c75;
+
+.current-workplace::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.15),
+            transparent
+    );
 }
-.code-block .comment {
-    color: #5c6370;
-    font-style: italic;
+
+/* Status indicator group */
+.status-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.75rem;
+    background: rgba(74, 222, 128, 0.1);
+    padding: 0.5rem 0.75rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(74, 222, 128, 0.2);
 }
+
+.active-indicator {
+    width: 8px;
+    height: 8px;
+    background-color: #4ade80;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+.status-text {
+    font-size: 0.85rem;
+    color: #4ade80;
+    font-weight: 500;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(74, 222, 128, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(74, 222, 128, 0);
+    }
+}
+
+/* Content wrapper */
+.workplace-content {
+    max-width: 90%;
+}
+
+/* Primary information group */
+.workplace-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.workplace-header::after {
+    content: '';
+    position: absolute;
+    bottom: -0.75rem;
+    left: 0;
+    width: 2rem;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.name-location-group {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+}
+
+.active-workplace-name {
+    font-size: 1.75rem;
+    font-weight: 600;
+    letter-spacing: -0.3px;
+    color: #ffffff;
+}
+
+.active-workplace-location {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.location-icon {
+    opacity: 0.5;
+    font-size: 1rem;
+}
+
+/* Secondary information group */
+.workplace-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.role-group {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 0.75rem 1rem;
+    border-radius: 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.workplace-description {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 1.25rem;
+    margin-top: 0.5rem;
+}
+
+.description-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+    color: #94a3b8;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.description-icon {
+    opacity: 0.5;
+    font-size: 1rem;
+}
+
+.description-content {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.description-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.75rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.description-content li {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+}
+
+.description-content li::before {
+    content: "•";
+    color: rgba(74, 222, 128, 0.5);
+}
+
+.role-icon {
+    color: #94a3b8;
+    opacity: 0.5;
+    font-size: 1.1rem;
+}
+
+.active-workplace-role {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #94a3b8;
+    letter-spacing: -0.2px;
+    font-weight: bold;
+}
+
+.date-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.date-icon {
+    color: #64748b;
+    opacity: 0.5;
+    font-size: 1rem;
+}
+
+.active-workplace-date {
+    color: #64748b;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Subtle background decoration */
+.workplace-decoration {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle at bottom right,
+    rgba(74, 222, 128, 0.05),
+    transparent 70%);
+    pointer-events: none;
+}
+
+/*.code-block {*/
+/*    background-color: #282c34;*/
+/*    border: 1px solid #444;*/
+/*    border-radius: 4px;*/
+/*    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;*/
+/*    font-size: 14px;*/
+/*    line-height: 1.5;*/
+/*    overflow-x: auto;*/
+/*    padding: 15px;*/
+/*    margin: 10px 0;*/
+/*    color: #abb2bf;*/
+/*}*/
+/*.code-block .prompt {*/
+/*    color: #98c379;*/
+/*}*/
+/*.code-block .number {*/
+/*    color: #d19a66;*/
+/*}*/
+/*.code-block .error {*/
+/*    color: #e06c75;*/
+/*}*/
+/*.code-block .comment {*/
+/*    color: #5c6370;*/
+/*    font-style: italic;*/
+/*}*/
 
 #certificates-container {
     display: grid;
@@ -315,5 +563,19 @@ footer {
 
     #skill-filter button {
         margin-bottom: .5rem;
+    }
+
+    .work-experience {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .work-experience > h3 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .workplace-content {
+        max-width: 100%;
     }
 }
