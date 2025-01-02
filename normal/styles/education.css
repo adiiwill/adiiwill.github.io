@@ -1,0 +1,15 @@
+.educations {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#education .education-item {
+    border-left: 3px solid #fff;
+    padding-left: 1rem;
+}
+
+#education .education-item i {
+    font-size: .8rem;
+    opacity: 80%;
+}

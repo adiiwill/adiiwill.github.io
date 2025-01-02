@@ -1,0 +1,19 @@
+#projects .ext {
+    text-decoration: underline;
+    color: #fff;
+}
+
+.projects-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.project-item {
+    background: #1a1a1a;
+    padding: 1rem 1rem;
+    border-radius: 5px;
+    position: relative;
+    text-decoration: none;
+}

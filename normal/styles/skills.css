@@ -1,0 +1,38 @@
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+#skill-filter {
+    margin-bottom: 1rem;
+}
+
+#skill-filter button {
+    padding: 0.5rem 1rem;
+    color: #fff;
+    border: 1px solid #252525;
+    background: #000;
+    border-radius: 5px;
+    margin-right: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#skill-filter button:hover {
+    background-color: #101010;
+}
+
+.skill-item {
+    background: #1a1a1a;
+    padding: 0.5rem 1rem;
+    border: 1px solid rgba(255,255,255, 0.05);
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+@media (max-width: 600px) {
+    #skill-filter button {
+        margin-bottom: .5rem;
+    }
+}

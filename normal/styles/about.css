@@ -1,0 +1,21 @@
+#about {
+    background: linear-gradient(90deg, rgb(12, 22, 78) 0%, #000 100%);
+    border-radius: 5px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+#about p {
+    font-size: 1.2rem;
+    max-width: 600px;
+}
+
+@media (max-width: 600px) {
+    #about {
+        background: linear-gradient(151deg, rgb(12, 22, 78) 0%, #000 100%);
+    }
+
+    #about p {
+        font-size: 1rem;
+    }
+}

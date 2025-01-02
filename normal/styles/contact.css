@@ -1,0 +1,17 @@
+.contact-info {
+    margin-top: 1rem;
+}
+
+.contact-info a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.contact-info p {
+    font-size: 1.2rem;
+    margin-bottom: .7rem;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
