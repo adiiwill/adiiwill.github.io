@@ -9,7 +9,7 @@ let mouseX = 0, mouseY = 0;
 let smallX = 0, smallY = 0;
 let bigX = 0, bigY = 0;
 
-const smallSpeed = 0.15;
+const smallSpeed = 1;
 const bigSpeed = 0.08;
 
 let isHoveringLink = false;
