@@ -43,8 +43,7 @@
     padding: 0.5rem 1rem;
     color: rgba(255, 255, 255, 0.9);
     border: 1px solid rgba(255, 255, 255, 0.05);
-    background: rgba(255, 255, 255, 0.03);
-    -webkit-backdrop-filter: blur(5px);
+    background: #171717;
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -53,26 +52,6 @@
     -moz-appearance: none;
     appearance: none;
     font-family: inherit;
-}
-
-#skill-filters button,
-#skill-filters button:hover,
-#skill-filters button:active,
-#skill-filters button:focus {
-    -webkit-tap-highlight-color: transparent;
-}
-
-#skill-filters button,
-#skill-filters button:hover,
-#skill-filters button:active,
-#skill-filters button:focus {
-    color: rgba(255, 255, 255, 0.9) !important;
-}
-
-#skill-filters button:hover,
-#skill-filters button.active {
-    background: rgba(255, 255, 255, 0.05);
-    border-color: rgba(255, 255, 255, 0.1);
 }
 
 .skills-list {
@@ -144,12 +123,5 @@
     .skill-item {
         padding: 0.6rem 1rem;
         font-size: 0.9rem;
-    }
-}
-
-@supports (backdrop-filter: blur(5px)) or (-webkit-backdrop-filter: blur(5px)) {
-    #skill-filters button {
-        backdrop-filter: blur(5px);
-        -webkit-backdrop-filter: blur(5px);
     }
 }
