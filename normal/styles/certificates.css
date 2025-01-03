@@ -43,13 +43,11 @@
             linear-gradient(90deg,
             rgba(0, 61, 172, 0.4) 0%,
             rgba(115, 176, 255, 0.6) 50%,
-            rgba(0, 61, 172, 0.4) 100%
-            ),
+            rgba(0, 61, 172, 0.4) 100%),
             linear-gradient(180deg,
             rgba(255, 255, 255, 0.1) 0%,
             transparent 50%,
-            rgba(255, 255, 255, 0.1) 100%
-            );
+            rgba(255, 255, 255, 0.1) 100%);
     -webkit-mask:
             linear-gradient(#fff 0 0) content-box,
             linear-gradient(#fff 0 0);
@@ -58,7 +56,9 @@
             linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
+    pointer-events: none; /* Add this line */
 }
+
 
 @keyframes borderFlow {
     0% { background-position: 0% 50%; }

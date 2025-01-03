@@ -25,8 +25,7 @@ async function loadCertificates() {
         // Initialize Swiper after certificates are loaded
         const swiper = new Swiper('.certificates-swiper', {
             slidesPerView: 'auto',
-            spaceBetween: 20,
-            centeredSlides: false,
+            spaceBetween: 30,
             grabCursor: true,
             navigation: {
                 nextEl: '.swiper-button-next',
