@@ -43,7 +43,7 @@
     padding: 0.5rem 1rem;
     color: rgba(255, 255, 255, 0.9);
     border: 1px solid rgba(255, 255, 255, 0.05);
-    background: #171717;
+    background: hsl(0, 0%, 10%);
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -52,6 +52,12 @@
     -moz-appearance: none;
     appearance: none;
     font-family: inherit;
+}
+
+#skill-filters button:hover {
+    background: hsla(0, 0%, 100%, 0.05);
+    border-color: hsla(0, 0%, 100%, 0.1);
+    box-shadow: 0 2px 8px hsla(0, 0%, 0%, 0.1);
 }
 
 .skills-list {
