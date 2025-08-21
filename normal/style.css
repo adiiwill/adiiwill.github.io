@@ -41,6 +41,32 @@ body {
     color: #fff;
 }
 
+.important-note {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    background-color: rgba(150, 0, 0, 0.2);
+    padding: 16px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    color: rgb(200, 0, 0);
+}
+
+.important-note > span {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(200, 0, 0);
+    width: 30px;
+    min-width: 30px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border-radius: 1000px;
+    border: 1px solid rgb(200, 0, 0);
+    font-weight: bold;
+    font-size: 18px;
+}
+
 .container {
     display: flex;
     flex-direction: column;

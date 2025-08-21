@@ -11,6 +11,8 @@ class TerminalPortfolio {
         document.title = "adiiwill@github:terminal";
         this.addEventListeners();
         this.displayWelcomeMessage();
+        commands.Log(`<pre style='color: rgb(200, 0, 0)'>(!) This portfolio is a time capsule of my earlier work.
+    It may not reflect my current skills or design approach, but I’m keeping it online as part of my journey.</pre>`)
     }
 
     addEventListeners() {
