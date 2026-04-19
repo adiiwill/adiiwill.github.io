@@ -2,12 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Adam's Business Card</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Adam Gazdag - Frontend Developer focused on clarity, restraint, and building calm, durable interfaces.">
+    <title>Adam Gazdag | Frontend Developer</title>
     <link rel="stylesheet" href="style.min.css">
 </head>
 <body>
-<div class="container">
-    <p id="icon">🌿</p>
+<main class="container">
+    <p id="icon" role="img" aria-label="Leaf icon">🌿</p>
 
     <h1 id="name">Adam Gazdag</h1>
     <p id="location">from Hungary</p>
@@ -22,13 +24,13 @@
         <a href="https://vextro.ai" target="_blank" rel="noopener noreferrer">Vextro</a>
     </p>
 
-    <div id="links">
+    <nav id="links" aria-label="Social Links">
         <a href="https://github.com/adiiwill" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <span>&middot;</span>
+        <span aria-hidden="true">&middot;</span>
         <a href="https://www.linkedin.com/in/gazdagadam" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <span>&middot;</span>
-        <a href="#">Website</a>
-    </div>
-</div>
+        <span aria-hidden="true">&middot;</span>
+        <a href="/">Website</a>
+    </nav>
+</main>
 </body>
 </html>
